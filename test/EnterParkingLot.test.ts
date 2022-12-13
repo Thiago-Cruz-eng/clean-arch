@@ -1,4 +1,7 @@
+import EnterParkingLot from '../src/core/useCase/EnterParkingLot';
+
 test("should enter parking lot", () => {
     const enterParkingLot = new EnterParkingLot();
-    expect(1).toBe(1)
+    const parkingLot = enterParkingLot.execute()
+    expect(parkingLot.code).toBe("shopping")
 })
